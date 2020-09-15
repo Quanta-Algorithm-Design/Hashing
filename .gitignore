@@ -1,0 +1,12 @@
+# C++ precompile files:
+*.o
+*.ii
+*.s
+*.d
+
+# LSP cache files:
+.ccls*/
+
+# Python cache files:
+__*__/
+
