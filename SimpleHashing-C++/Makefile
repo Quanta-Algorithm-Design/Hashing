@@ -5,22 +5,23 @@
 # Compiler settings - Can be customized.
 CC = g++
 # -g: keep fucntion tags for debugging
-# -save-temps: keep assembly generate assembly code
-CXXFLAGS = -g -save-temps -std=c++11 -Wall
+# -save-temps: keep assembly generate assembly code in the obj directory
+CXXFLAGS = -g -save-temps=obj -std=c++11 -Wall
 LDFLAGS =
 
 # Makefile settings - Can be customized.
-APPNAME = TheChernoClass
+APPNAME = SimpleHashing
 EXT = .cpp
 PROJDIR = $(pwd)
-SRCDIR = /home/phoenix/Code/Algorithm/MIT/Quanta/SimpleHashing/src
-OBJDIR = /home/phoenix/Code/Algorithm/MIT/Quanta/SimpleHashing/obj
+SRCDIR = src
+OBJDIR = obj
+TEMPDIR = $(OBJDIR)
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
 OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
 DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
-TEMP= $(OBJ:$(OBJDIR)/%.o=%.{ii,s})
+TEMP= $(OBJ:$(OBJDIR)/%.o=$(TEMPDIR)/%.{ii,s})
 # UNIX-based OS variables & settings
 RM = rm
 DELOBJ = $(OBJ)
