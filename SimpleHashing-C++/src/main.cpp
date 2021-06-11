@@ -14,12 +14,13 @@
 
 class Table
 {
-    // Our hash table class: Requires:
-    // hash: to store the hashed result,
-    // magic: store an intermediate variable which it's calculation is difficult so we store it since it doesn't change a lot.
-    // p: is our prime number for the hash function
-    // base: is the base in which we represent our characters. e.g. 256 for ASCII
-    // i_base: this is the Modualar inverse of base, with respect to p (our prime number)
+    /* Our hash table class: Requires:
+     * hash: to store the hashed result,
+     * magic: store an intermediate variable which it's calculation is difficult so we store it since it doesn't change a lot.
+     * p: is our prime number for the hash function
+     * base: is the base in which we represent our characters. e.g. 256 for ASCII
+     * i_base: this is the Modualar inverse of base, with respect to p (our prime number)
+     */
 
     private:
         int hash;
